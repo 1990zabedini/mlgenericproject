@@ -1,4 +1,3 @@
-pandas 
-numpy 
-matplotlib
--e . 
+pandas>=1.5.3 
+numpy>=1.19
+-e .
