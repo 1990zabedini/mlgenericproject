@@ -1,12 +1,12 @@
 import sys 
 import logging
 from logger import logging
+
 def error_message_detail(error,error_detail:sys):
     _,_,exce_tb=error_detail.exc_info()
     file_name=exce_tb.tb_frame.f_code.co_filename
     error_message="Error occured in python scrip name [{0}] line number [{1}] error message [{2}]".format(
-        file_name,exce_tb.tb_lineno,str(error)
-    )
+        file_name,exce_tb.tb_lineno,str(error))
 
     return error_message
 
@@ -28,12 +28,12 @@ class CustomException(Exception):
 # the output of the function will be considered as the variable in the class named error_message 
 # error_detail will be retrieved by sys 
 
-# if __name__=="__main__":
-#     try:
-#         a=1/0
-#     except Exception as e:
-#         logging.info("divide by zero ")
-#         raise CustomException(e,sys)
+if __name__=="__main__":
+    try:
+        a=1/0
+    except Exception as e:
+        logging.info("divide by zero ")
+        raise CustomException(e,sys)
 
 # the above line of code is for checking the error file and if it is working a message must be written inside the log file
 

@@ -19,5 +19,4 @@ author="melika",
 author_email="zabedini164@gmail.com",
 packages=find_packages(),
 install_requires=get_requirements("requirments.txt")
-
 )
